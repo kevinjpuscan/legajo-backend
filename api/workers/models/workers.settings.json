@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workers",
+  "info": {
+    "name": "Servidores Públicos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "identification_number": {
+      "type": "uid"
+    },
+    "last_names": {
+      "type": "string"
+    },
+    "first_names": {
+      "type": "string"
+    },
+    "birth_date": {
+      "type": "date"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "documents": {
+      "via": "worker",
+      "collection": "documents"
+    },
+    "work_licenses": {
+      "via": "worker",
+      "collection": "work-licenses"
+    },
+    "job_position_changes": {
+      "via": "worker",
+      "collection": "job-position-changes"
+    },
+    "job_position": {
+      "via": "workers",
+      "model": "job-positions"
+    },
+    "salaries": {
+      "via": "worker",
+      "collection": "salaries"
+    }
+  }
+}

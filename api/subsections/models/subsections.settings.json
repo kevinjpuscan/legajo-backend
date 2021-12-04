@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subsections",
+  "info": {
+    "name": "Subsecciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ordinal_letter": {
+      "type": "string"
+    },
+    "section": {
+      "via": "subsections",
+      "model": "sections"
+    },
+    "document_factories": {
+      "via": "subsection",
+      "collection": "document-factories"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salaries",
+  "info": {
+    "name": "Remuneraciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "worker": {
+      "via": "salaries",
+      "model": "workers"
+    },
+    "total_amount": {
+      "type": "decimal"
+    },
+    "bonus": {
+      "via": "salary",
+      "model": "bonus"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE"
+      ]
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "salary_concepts": {
+      "via": "salary",
+      "collection": "salary-concepts"
+    }
+  }
+}

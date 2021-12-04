@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/job-position-changes",
+      "handler": "job-position-changes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/job-position-changes/count",
+      "handler": "job-position-changes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/job-position-changes/:id",
+      "handler": "job-position-changes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/job-position-changes",
+      "handler": "job-position-changes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/job-position-changes/:id",
+      "handler": "job-position-changes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/job-position-changes/:id",
+      "handler": "job-position-changes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

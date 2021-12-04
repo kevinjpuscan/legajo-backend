@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salary_concepts",
+  "info": {
+    "name": "Conceptos de Remuneraciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "concept": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "salary": {
+      "via": "salary_concepts",
+      "model": "salaries"
+    }
+  }
+}

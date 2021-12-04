@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/work-licenses",
+      "handler": "work-licenses.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/work-licenses/count",
+      "handler": "work-licenses.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/work-licenses/:id",
+      "handler": "work-licenses.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/work-licenses",
+      "handler": "work-licenses.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/work-licenses/:id",
+      "handler": "work-licenses.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/work-licenses/:id",
+      "handler": "work-licenses.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

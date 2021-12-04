@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organizational_units",
+  "info": {
+    "name": "Unidades Organizacionales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "parent": {
+      "model": "organizational-units",
+      "via": "organizational_units"
+    },
+    "organizational_units": {
+      "collection": "organizational-units",
+      "via": "parent"
+    },
+    "work_licenses": {
+      "via": "organizational_unit",
+      "collection": "work-licenses"
+    },
+    "job_positions": {
+      "via": "organizational_unit",
+      "collection": "job-positions"
+    }
+  }
+}

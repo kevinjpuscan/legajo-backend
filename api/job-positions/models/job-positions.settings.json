@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_positions",
+  "info": {
+    "name": "Puestos Laborales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "organizational_unit": {
+      "via": "job_positions",
+      "model": "organizational-units"
+    },
+    "workers": {
+      "via": "job_position",
+      "collection": "workers"
+    },
+    "bonuses": {
+      "via": "job_position",
+      "collection": "bonus"
+    },
+    "job_position_changes_from": {
+      "via": "job_position_from",
+      "collection": "job-position-changes"
+    },
+    "job_position_changes_to": {
+      "via": "job_position_to",
+      "collection": "job-position-changes"
+    }
+  }
+}

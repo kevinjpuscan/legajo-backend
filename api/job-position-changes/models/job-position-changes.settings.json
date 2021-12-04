@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_position_changes",
+  "info": {
+    "name": "Rotaciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "worker": {
+      "via": "job_position_changes",
+      "model": "workers"
+    },
+    "date_change": {
+      "type": "date"
+    },
+    "job_position_from": {
+      "via": "job_position_changes_from",
+      "model": "job-positions"
+    },
+    "job_position_to": {
+      "via": "job_position_changes_to",
+      "model": "job-positions"
+    }
+  }
+}

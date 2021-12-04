@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "document_factories",
+  "info": {
+    "name": "Prototipo de Documentos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "section": {
+      "via": "document_factories",
+      "model": "sections"
+    },
+    "subsection": {
+      "via": "document_factories",
+      "model": "subsections"
+    },
+    "template": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "info_structure": {
+      "type": "json"
+    },
+    "documents": {
+      "via": "document_factory",
+      "collection": "documents"
+    }
+  }
+}

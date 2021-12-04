@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_licenses",
+  "info": {
+    "name": "Licencias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "LICENCIA",
+        "PERMISO",
+        "VACACIONES"
+      ]
+    },
+    "worker": {
+      "via": "work_licenses",
+      "model": "workers"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "EN_CURSO",
+        "PENDIENTE",
+        "FINALIZADA",
+        "CANCELADA"
+      ]
+    },
+    "organizational_unit": {
+      "via": "work_licenses",
+      "model": "organizational-units"
+    }
+  }
+}

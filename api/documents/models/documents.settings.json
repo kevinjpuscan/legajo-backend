@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "name": "Documentos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "information": {
+      "type": "json"
+    },
+    "document_files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "document_factory": {
+      "via": "documents",
+      "model": "document-factories"
+    },
+    "worker": {
+      "via": "documents",
+      "model": "workers"
+    },
+    "title": {
+      "type": "string"
+    },
+    "bonuses": {
+      "via": "document",
+      "collection": "bonus"
+    }
+  }
+}

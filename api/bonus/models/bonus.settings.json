@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bonuses",
+  "info": {
+    "name": "Bonos Temporales",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "job_position": {
+      "via": "bonuses",
+      "model": "job-positions"
+    },
+    "date_start": {
+      "type": "date"
+    },
+    "date_end": {
+      "type": "date"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "ACTIVE",
+        "INACTIVE"
+      ]
+    },
+    "document": {
+      "via": "bonuses",
+      "model": "documents"
+    },
+    "salary": {
+      "via": "bonus",
+      "model": "salaries"
+    }
+  }
+}
