@@ -5,4 +5,10 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async find(ctx){
+    const { query } = ctx;
+    const documents = await strapi.query('documents').find(query, ctx.populate);
+    return documents;
+  }
+};
