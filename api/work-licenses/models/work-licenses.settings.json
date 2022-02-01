@@ -25,10 +25,10 @@
       "model": "workers"
     },
     "date_start": {
-      "type": "date"
+      "type": "datetime"
     },
     "date_end": {
-      "type": "date"
+      "type": "datetime"
     },
     "status": {
       "type": "enumeration",

@@ -5,4 +5,9 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  find(ctx) {
+    const { query } = ctx;
+    return strapi.query('job-positions').find(query, ctx.populate);
+  },
+};

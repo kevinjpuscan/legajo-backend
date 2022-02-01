@@ -20,10 +20,10 @@
       "model": "job-positions"
     },
     "date_start": {
-      "type": "date"
+      "type": "datetime"
     },
     "date_end": {
-      "type": "date"
+      "type": "datetime"
     },
     "state": {
       "type": "enumeration",

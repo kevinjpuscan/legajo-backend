@@ -19,7 +19,7 @@
       "type": "decimal"
     },
     "date_start": {
-      "type": "date"
+      "type": "datetime"
     },
     "salary": {
       "via": "salary_concepts",

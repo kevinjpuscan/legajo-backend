@@ -17,7 +17,7 @@
       "model": "workers"
     },
     "date_change": {
-      "type": "date"
+      "type": "datetime"
     },
     "job_position_from": {
       "via": "job_position_changes_from",
