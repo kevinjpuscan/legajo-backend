@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte PDF</title>
+    <style>
+		body{
+			font-size:10pt;
+		}
+		.wrapper{
+			padding:0 1rem;
+		}
+
+		.content{
+			padding:0 1rem;
+		}
+
+			.header{
+						width:100%;
+						text-align:center;
+			}
+			.signature{
+				padding:3rem 0rem;
+			}
+
+			.signature-line{
+				height:100px;
+				width:100px;
+				border-bottom:1px dotted black;
+				margin:auto;
+			}
+
+			.fingerprint{
+				height:100px;
+				width:70px;
+				border:1px solid black;
+				margin:auto;
+			}
+			.signature-name {
+				padding:1rem 0;
+				text-align:center;
+			}			
+
+			.signature-container{
+				display:flex;
+				align-items:center;
+				flex-direction:column;
+			}					
+
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+    <section class="header">
+    	<h3>ANEXO 2:</h3>
+		<h4>DECLARACIÓN JURADA DE DOMICILIO ACTUAL</h4>
+    </section>
+	<section class="content">
+		<div>	
+			<div>
+			<p>
+			Por la presente, yo <strong>{{names}} </strong>, identificado/a con <strong>DNI Nº {{identification_number}}</strong>, declaro bajo juramento, que:
+			</p>
+			</div>
+			<div>Mi domicilio actual es: {{home}}</div>
+			<div>Mi correo actual es: {{email}}</div>
+			<div>Mi telefono actual es: {{phone}}</div>
+			<div>
+			<p>
+			Los considerados y autorizados para cualquier comunicación o notificación por parte de la entidad.
+			</p>
+			</div>
+		</div>
+		<div style="margin-top:1rem;">
+			Chota, {{today}}
+		</div>
+	</section>
+		<footer>
+		<div class="signature">		
+		<table style="width:100%">
+		<tr>
+    <td style="width:50%">
+		<div class="signature_name-container signature-container">
+					<div class="signature-line"></div>
+					<div class="signature-name">Firma</div>
+				</div>
+		</td>
+		<td style="width:50%">
+		<div class="signature_fingerprint-container signature-container">
+					<div class="fingerprint">
+						
+					</div>
+					<div class="signature-name">Huella Digital</div>
+				</div>
+		</td>
+  </tr>
+</table>
+		</div>
+		</footer>
+	</div>
+</body>
+
+</html>

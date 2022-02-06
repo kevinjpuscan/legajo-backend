@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte PDF</title>
+    <style>
+		body{
+			font-size:10pt;
+		}
+		ul{
+			margin:0.5rem 0;
+		}
+		.wrapper{
+			padding:0 1rem;
+		}
+
+			.header{
+						width:100%;
+						text-align:center;
+			}
+			.signature{
+				padding:3rem 0rem;
+			}
+
+			.signature-line{
+				height:100px;
+				width:100px;
+				border-bottom:1px dotted black;
+				margin:auto;
+			}
+
+			.fingerprint{
+				height:100px;
+				width:70px;
+				border:1px solid black;
+				margin:auto;
+			}
+			.signature-name {
+				padding:1rem 0;
+				text-align:center;
+			}			
+
+			.signature-container{
+				display:flex;
+				align-items:center;
+				flex-direction:column;
+			}							
+
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+    <section class="header">
+    	<h3>ANEXO 1:</h3>
+		<h4>FICHA DE DATOS PERSONALES</h4>
+    </section>
+	<section class="content">
+		<div>	
+		<ol type="I">
+			<li>DATOS PERSONALES</li>
+			<ul>
+				<li>Apellidos: {{last_names}}</li>
+				<li>Nombres: {{first_names}}</li>
+				<li>DNI/CE: {{identification_number}}</li>
+				<li>RUC: {{ruc}}</li>
+				<li>Licencia de conducir:</li>
+				<li>Clase de licencia de conducir: {{license_class}}</li>
+				<li>Categoría de licencia de conducir: {{license_category}}</li>
+				<li>Estado civil: {{civil_status}}</li>
+				<li>Sexo: {{sex}}</li>
+				<li>Peso: {{weight}} kg</li>
+				<li>Talla: {{height}} cm</li>
+				<li>Grupo Sanguíneo: {{blood_group}}</li>
+				<li>Correo electrónico: {{email}}</li>
+				<li>Fecha de nacimiento: {{date_birth}}</li>
+				<li>Distrito de nacimiento: {{district_birth}}</li>
+				<li>Provincia de nacimiento: {{province_birth}}</li>
+				<li>Departamento de nacimiento: {{region_birth}}</li>
+				<li>País de nacimiento: {{country_birth}}</li>
+				<li>Dirección de domicilio actual: {{home}}</li>
+				<li>Distrito de domicilio actual: {{district_home}}</li>
+				<li>Provincia de domicilio actual: {{province_home}}</li>
+				<li>Departamento de domicilio actual: {{region_birth}}</li>
+			</ul>
+			<li>CONDICION LABORAL</li>
+			<ul>
+				<li>Régimen laboral: {{laboral_regime}}</li>
+				<li>Modalidad de vinculación: {{bonding_modality}}</li>
+				<li>Cargo: {{position}}</li>
+				<li>Fecha de Ingreso: {{bonding_start_date}}</li>
+				<li>Unidad Organizacional: {{assigned_org_unit}}</li>
+				<li>Remuneración:</li>
+				<li>Documento de nombramiento: {{bonding_document}}</li>
+			</ul>
+			<li>SISTEMA DE PENSIONES</li>
+			<ul>
+				<li>Sistema: {{regime_pension}}</li>
+				<li>Nombre de AFP: {{name_pension}}</li>
+			</ul>
+			<li>ESTRUCTURA FAMILIAR</li>
+			{{#familiars}}
+			<ul>
+				<li>Nombre: {{names}}</li>
+				<li>DNI: {{dni}}</li>
+				<li>Parentesco: {{relationship}}</li>
+				<li>Sexo: {{sex}}</li>
+				<li>Fecha de nacimiento: {{birth_date}}</li>
+			</ul>
+			{{/familiars}}
+			<li>FORMACION ACADEMICA</li>
+			<ul>
+				<li>Educación básica:</li>
+				{{#basicEducations}}
+				<ul>
+					<li>Institución: {{organization}}</li>
+					<li>Nivel: {{level}}</li>
+					<li>Año de inicio: {{year_start}}</li>
+					<li>Año de fin: {{year_end}}</li>
+				</ul>
+				{{/basicEducations}}
+				<li>Educación superior:</li>
+				{{#superiorEducations}}
+				<ul>
+					<li>Institución: {{organization}}</li>
+					<li>Descripción: {{grade_description}}</li>
+					<li>Emisión de grado: {{degree_date}}</li>
+					<li>Años: {{years}}</li>
+				</ul>
+				{{/superiorEducations}}
+				<li>Cursos y/o capacitaciones:</li>
+				{{#coursesEducations}}
+				<ul>
+					<li>Institución: {{organization}}</li>
+					<li>Descripción: {{description}}</li>
+					<li>Inicio: {{start_date}}</li>
+					<li>Fin: {{end_date}}</li>
+					<li>Horas: {{hours}}</li>
+					<li>Años: {{years}}</li>
+				</ul>
+				{{/coursesEducations}}
+			</ul>
+			<li>EXPERIENCIA LABORAL</li>
+			<ul>
+				<li>Experiencia Previa:</li>
+				{{#experiencesPrev}}
+				<ul>
+					<li>Organización: {{organization}}</li>
+					<li>Puesto: {{position}}</li>
+					<li>Inicio: {{start_date}}</li>
+					<li>Fin: {{end_date}}</li>
+				</ul>
+				{{/experiencesPrev}}
+				<li>Experiencia en la Institución:</li>
+				{{#experiences}}
+				<ul>
+					<li>Organización: {{organization}}</li>
+					<li>Puesto: {{position}}</li>
+					<li>Inicio: {{start_date}}</li>
+				</ul>
+				{{/experiences}}
+			</ul>
+			<li>IDIOMAS</li>
+			<li>DATOS DE EMERGENCIA</li>
+			{{#emergencyContacts}}
+			<ul>
+				<li>Nombre: {{name}}</li>
+				<li>Teléfono: {{phone}}</li>
+				<li>Email: {{email}}</li>
+			</ul>
+			{{/emergencyContacts}}
+		</ol>
+		</div>
+		<div style="margin-top:1rem;">
+			Chota, {{today}}
+		</div>
+	</section>
+		<footer>
+		<div class="signature">		
+		<table style="width:100%">
+		<tr>
+    <td style="width:50%">
+		<div class="signature_name-container signature-container">
+					<div class="signature-line"></div>
+					<div class="signature-name">Firma</div>
+				</div>
+		</td>
+		<td style="width:50%">
+		<div class="signature_fingerprint-container signature-container">
+					<div class="fingerprint">
+						
+					</div>
+					<div class="signature-name">Huella Digital</div>
+				</div>
+		</td>
+  </tr>
+</table>
+		</div>
+		</footer>
+	</div>
+</body>
+
+</html>

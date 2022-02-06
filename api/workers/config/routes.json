@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/workers/report/:anexo/:worker",
+      "handler": "workers.getReportPdf",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/workers",
       "handler": "workers.create",

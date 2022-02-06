@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte PDF</title>
+    <style>
+		body{
+			font-size:10pt;
+		}
+		.wrapper{
+			padding:0 1rem;
+		}
+
+		.content{
+			padding:0 1rem;
+		}
+
+			.header{
+						width:100%;
+						text-align:center;
+			}
+			.signature{
+				padding:3rem 0rem;
+			}
+
+			.signature-line{
+				height:100px;
+				width:100px;
+				border-bottom:1px dotted black;
+				margin:auto;
+			}
+
+			.fingerprint{
+				height:100px;
+				width:70px;
+				border:1px solid black;
+				margin:auto;
+			}
+			.signature-name {
+				padding:1rem 0;
+				text-align:center;
+			}			
+
+			.signature-container{
+				display:flex;
+				align-items:center;
+				flex-direction:column;
+			}					
+	
+
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+    <section class="header">
+    	<h3>ANEXO 3:</h3>
+		<h4>DECLARACIÓN JURADA DE PROHIBICIONES</h4>
+    </section>
+	<section class="content">
+		<div>	
+			<div>
+			<p>
+			Por la presente, yo <strong>{{names}} </strong>, identificado/a con <strong>DNI Nº {{identification_number}}</strong>, declaro bajo juramento:
+			</p>
+			</div>
+			<div>
+			<ul>
+			<li>No contar con antecedentes policiales.</li>
+			<li>No contar con antecedentes penales.</li>
+			<li>No contar con antecedentes judiciales.</li>
+			<li>Gozar de buena salud.</li>
+			<li>No estar en el Registro de Deudores Alimentarios Morosos – REDAM. Adjuntar impresión de consulta.</li>
+			<li>No percibir Doble Ingreso del Estado.</li>
+			<li>No estar inscrito en el Registro de Deudores de Reparaciones Civiles por Delitos Dolosos – REDERECI.</li>
+			<li>No estar incurso en prohibiciones e incompatibilidades de funcionarios y servidores públicos, de conformidad con lo establecido en la Ley Nº 27588.</li>
+			<li>No tener inhabilitación vigente según el Registro Nacional de Sanciones de Destitución y Despido – RNSDD. Adjuntar impresión.</li>
+			</ul>
+			 </div>
+		</div>
+		<div style="margin-top:1rem;">
+			Chota, {{today}}
+		</div>
+	</section>
+		<footer>
+		<div class="signature">		
+		<table style="width:100%">
+		<tr>
+    <td style="width:50%">
+		<div class="signature_name-container signature-container">
+					<div class="signature-line"></div>
+					<div class="signature-name">Firma</div>
+				</div>
+		</td>
+		<td style="width:50%">
+		<div class="signature_fingerprint-container signature-container">
+					<div class="fingerprint">
+						
+					</div>
+					<div class="signature-name">Huella Digital</div>
+				</div>
+		</td>
+  </tr>
+</table>
+		</div>
+		</footer>
+	</div>
+</body>
+
+</html>

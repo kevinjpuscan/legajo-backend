@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte PDF</title>
+    <style>
+		body{
+			font-size:10pt;
+		}
+		.wrapper{
+			padding:0 1rem;
+		}
+
+		.content{
+			padding:0 1rem;
+		}
+
+			.header{
+						width:100%;
+						text-align:center;
+			}
+			.signature{
+				padding:3rem 0rem;
+			}
+
+			.signature-line{
+				height:100px;
+				width:100px;
+				border-bottom:1px dotted black;
+				margin:auto;
+			}
+
+			.fingerprint{
+				height:100px;
+				width:70px;
+				border:1px solid black;
+				margin:auto;
+			}
+			.signature-name {
+				padding:1rem 0;
+				text-align:center;
+			}			
+
+			.signature-container{
+				display:flex;
+				align-items:center;
+				flex-direction:column;
+			}					
+
+			.content table,.content th,.content td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+
+			th{
+				text-align:center;
+			}
+
+    </style>
+</head>
+
+<body>
+	<div class="wrapper">
+    <section class="header">
+    	<h3>ANEXO 4:</h3>
+		<h4>DECLARACIÓN JURADA DE PARENTESCO, SEGÚN LEY Nº 26771 Y DECRETO SUPREMO N° 034-2005-PCM</h4>
+    </section>
+	<section class="content">
+		<div>	
+			<div>
+			<p>
+			Por la presente, yo <strong>{{names}} </strong>, identificado/a con <strong>DNI Nº {{identification_number}}</strong>, declaro bajo juramento, que:
+			</p>
+			</div>
+			<div>
+				<p>Cuento con pariente (s), hasta el cuarto grado de consanguinidad, segundo de afinidad y/o cónyuge (padre, hermano, hijo, tío, sobrino, primo, nieto, suegro, cuñado), que laboran en la Municipalidad de Chota, según detalle</p>
+			 </div>
+			 <div>
+			 <table style="width:100%">
+			 <tr>
+			 		<th style="width:35%">Nombres</th>
+					<th style="width:15%">DNI</th>
+					<th style="width:15%">Parentesco</th>
+					<th style="width:35%">Cargo</th>
+			 </tr>
+			 <tr>
+			 	<td style="width:35%">. </td>
+					<td style="width:15%"> </td>
+					<td style="width:15%"> </td>
+					<td style="width:35%"> </td>
+			 </tr>
+			 <td style="width:35%">. </td>
+					<td style="width:15%"> </td>
+					<td style="width:15%"> </td>
+					<td style="width:35%"> </td>
+			 </tr>
+			 <td style="width:35%">. </td>
+					<td style="width:15%"> </td>
+					<td style="width:15%"> </td>
+					<td style="width:35%"> </td>
+			 </tr>
+			 </table>
+			 </div>
+		</div>
+		<div style="margin-top:1rem;">
+			Chota, {{today}}
+		</div>
+	</section>
+		<footer>
+		<div class="signature">		
+		<table style="width:100%">
+		<tr>
+    <td style="width:50%">
+		<div class="signature_name-container signature-container">
+					<div class="signature-line"></div>
+					<div class="signature-name">Firma</div>
+				</div>
+		</td>
+		<td style="width:50%">
+		<div class="signature_fingerprint-container signature-container">
+					<div class="fingerprint">
+						
+					</div>
+					<div class="signature-name">Huella Digital</div>
+				</div>
+		</td>
+  </tr>
+</table>
+		</div>
+		</footer>
+	</div>
+</body>
+
+</html>

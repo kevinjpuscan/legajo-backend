@@ -55,6 +55,15 @@
     "salaries": {
       "via": "worker",
       "collection": "salaries"
+    },
+    "info": {
+      "type": "json"
+    },
+    "sex": {
+      "type": "string"
+    },
+    "ruc": {
+      "type": "string"
     }
   }
 }
