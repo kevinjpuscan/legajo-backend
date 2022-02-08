@@ -159,6 +159,7 @@ module.exports = class WorkerReportPdf {
       ruc:`${currentWorker.ruc||''}`,
       civil_status:`${currentWorker.info?.marital_status||''}`,
       sex:`${currentWorker.sex||''}`,
+      languages:(currentWorker.info?.languages||[]).map((language)=>({name:language})),
       weight:`${currentWorker.info?.weight||''}`,
       height:`${currentWorker.info?.height||''}`,
       blood_group:`${currentWorker.info?.blood_group||''}`,

@@ -7,6 +7,7 @@
     <style>
 		body{
 			font-size:10pt;
+			line-height: 1.1rem;
 		}
 		ul{
 			margin:0.5rem 0;
@@ -162,6 +163,11 @@
 				{{/experiences}}
 			</ul>
 			<li>IDIOMAS</li>
+			<ul>
+			{{#languages}}
+				<li> {{name}} </li>
+			{{/languages}}
+			</ul>
 			<li>DATOS DE EMERGENCIA</li>
 			{{#emergencyContacts}}
 			<ul>
