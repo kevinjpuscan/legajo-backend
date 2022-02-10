@@ -26,8 +26,8 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "ACTIVE",
-        "INACTIVE"
+        "ACTIVO",
+        "INACTIVO"
       ]
     },
     "date_start": {
