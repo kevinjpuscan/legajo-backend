@@ -28,8 +28,8 @@
     "state": {
       "type": "enumeration",
       "enum": [
-        "ACTIVE",
-        "INACTIVE"
+        "ACTIVO",
+        "INACTIVO"
       ]
     },
     "document": {
@@ -39,6 +39,9 @@
     "salary": {
       "via": "bonus",
       "model": "salaries"
+    },
+    "document_url": {
+      "type": "string"
     }
   }
 }

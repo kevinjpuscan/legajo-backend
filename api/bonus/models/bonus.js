@@ -5,4 +5,10 @@
  * to customize this model
  */
 
-module.exports = {};
+module.exports = {
+  lifecycles: {
+    afterCreate(bonus) {
+      strapi.query('bonus').update({id:bonus.id},{document_url:bonus.document.document_files[0]?.url});
+    },
+  },
+};
