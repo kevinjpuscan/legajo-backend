@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_sources",
+  "info": {
+    "name": "Report - Fuentes de datos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "query": {
+      "type": "text"
+    },
+    "reportes": {
+      "via": "data_source",
+      "collection": "reports"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_groups",
+  "info": {
+    "name": "Report - Grupo de Reportes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "reports": {
+      "via": "report_group",
+      "collection": "reports"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}
