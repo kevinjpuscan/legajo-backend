@@ -1,4 +1,0 @@
-INSERT INTO public.report_groups (id, title, slug, created_by, updated_by, created_at, updated_at, "order") VALUES (4, 'Servidores Públicos', 'servidores-publicos', 1, 1, '2022-02-17 23:42:16.718000', '2022-02-17 23:42:16.732000', 1);
-INSERT INTO public.report_groups (id, title, slug, created_by, updated_by, created_at, updated_at, "order") VALUES (1, 'Unidades Organizacionales', 'unidades-organizacionales', 1, 1, '2022-02-17 22:26:18.123000', '2022-02-17 23:42:30.432000', 2);
-INSERT INTO public.report_groups (id, title, slug, created_by, updated_by, created_at, updated_at, "order") VALUES (2, 'Puestos Laborales', 'puestos-laborales', 1, 1, '2022-02-17 22:26:35.748000', '2022-02-17 23:42:36.368000', 3);
-INSERT INTO public.report_groups (id, title, slug, created_by, updated_by, created_at, updated_at, "order") VALUES (3, 'Licencias', 'licencias', 1, 1, '2022-02-17 22:26:49.540000', '2022-02-17 23:42:42.110000', 4);
